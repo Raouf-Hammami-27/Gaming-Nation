@@ -1,0 +1,67 @@
+<ion-view class="feeds-categories-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Home Menu</span>
+  </ion-nav-title>
+  <ion-content>
+    <div class="row categories-list">
+         <div class="col col-50">
+        <a class="feed-category" ui-sref="app.events-feeds">
+          <pre-img ratio="_1_1" helper-class="square-image">
+            <img class="category-image" ng-src="../../img/events.jpg" spinner-on-load>
+          </pre-img>
+          <div class="category-bg"></div>
+          <span class="category-title">Events</span>
+        </a>
+         </div>
+        <div class="col col-50">
+        <a class="feed-category" ui-sref="app.alltournaments-feeds">
+          <pre-img ratio="_1_1" helper-class="square-image">
+            <img class="category-image" ng-src="../../img/tournament.jpg" spinner-on-load>
+          </pre-img>
+          <div class="category-bg"></div>
+          <span class="category-title">Tournaments</span>
+        </a>
+         </div>
+        <div class="col col-50">
+        <a class="feed-category" ui-sref="app.games-feeds">
+          <pre-img ratio="_1_1" helper-class="square-image">
+            <img class="category-image" ng-src="img/games.jpg" spinner-on-load>
+          </pre-img>
+          <div class="category-bg"></div>
+          <span class="category-title">Games</span>
+        </a>
+         </div>
+        
+        <div class="col col-50">
+        <a class="feed-category" ui-sref="app.Bestgames-feeds">
+          <pre-img ratio="_1_1" helper-class="square-image">
+            <img class="category-image" ng-src="img/gamesss.png" spinner-on-load>
+          </pre-img>
+          <div class="category-bg"></div>
+          <span class="category-title">Top Ranked Games</span>
+        </a>
+         </div>
+          <div class="col col-50">
+        <a class="feed-category" ui-sref="app.Newws-feeds">
+          <pre-img ratio="_1_1" helper-class="square-image">
+            <img class="category-image" ng-src="img/GAMESNews.jpg" spinner-on-load>
+          </pre-img>
+          <div class="category-bg"></div>
+          <span class="category-title">News</span>
+        </a>
+         </div>
+      <div ng-repeat="category in feeds_categories" class="col col-50">
+        <a class="feed-category" ui-sref="app.category-feeds({categoryId: (category.title | slugify)})">
+          <pre-img ratio="_1_1" helper-class="square-image">
+            <img class="category-image" ng-src="{{category.image}}" spinner-on-load>
+          </pre-img>
+          <div class="category-bg"></div>
+          <span class="category-title">{{category.title}}</span>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+<ion-view class="post-view">
+  <ion-content>
+    <div class="post-heading item item-text-wrap">
+      <h1 class="post-title">{{tournament.name}}</h1>
+        
+      <div class="item item-image">
+            <img ng-src="{{tournament.image_link}}">
+          </div>
+    </div>
+    <div class="post-content item item-text-wrap" post-content>
+    
+    <button ng-click="reservation()" class="button button-assertive">Register for the Tournament</button>
+    
+    <p class="post-text" dynamic-anchor-fix ng-bind-html="tournament.description | rawHtml"></p>
+    
+    <button ui-sref="app.maps({latitude: tournament.latitude,longitude: tournament.longitude,adresse:tournament.adresse})" class="button icon-lef ion-ios-location button-balanced  button-outline">See Adresse on Maps</button>
+        
+    <button ui-sref="app.tournament-live({tournamentId:tournament.id_tournament})" class="button icon-left ion-radio-waves button-assertive button-block button-outline" ng>Live Results</button>
+    </div>
+        
+  </ion-content>
+  <ion-footer-bar class="post-footer bar bar-footer bar-dark">
+    <div class="row">
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon icon-right ion-plus" bigger-text=".post-view .post-text">A</a>
+      </div>
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon icon-right ion-minus" smaller-text=".post-view .post-text">A</a>
+      </div>
+      
+    </div>
+  </ion-footer-bar>
+</ion-view>

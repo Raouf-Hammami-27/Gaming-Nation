@@ -1,0 +1,41 @@
+<ion-view class="login-view auth-view" cache-view="false" data-ng-controller="loginController">
+  <ion-content scroll="false">
+    <div class="row">
+      <div class="col col-center">
+        <div class="card login-container" content-tabs tabsdata='tabsdata'>
+          <form name="login_form" class="" novalidate ng-cloak>
+            <my-tabs>
+              <my-tab title="LogIn">
+                <div  class="list">
+                  <label class="item item-input">
+                    <input name="user_email" type="text" placeholder="Username" ng-model="loginData.userName" ng-init="" required>
+                  </label>
+                  <label class="item item-input" show-hide-container>
+                    <input name="user_password" type="password" placeholder="Password" ng-model="loginData.password" required  show-hide-input>
+                  </label>
+                </div>
+              </my-tab>
+            </my-tabs>
+            <div class="item item-body bottom-content">
+              <button type="submit" class="button button-balanced button-block button-outline" ng-click="login()" ng-disabled="(login_form.user_email.$invalid || login_form.user_password.$invalid)" ui-sref='app.feeds-categories({idUser: cnt.Id})' >
+                Log In
+              </button>
+                <br>
+                <button class="button icon-center ion-social-google button-block button-outline button-assertive" ng-click="gplusLogin()">&nbsp Google</button>
+                <br>
+                <button class="button icon-center ion-social-facebook button-block button-outline button-positive" ng-click="fbLogin()">&nbsp Facebook</button
+            </div>
+          </form>
+        </div>
+        <div class="alternative-actions">
+          <a class="forgot-password button button-small button-clear button-light" ui-sref="auth.forgot-password">
+            Forgot Password?
+          </a>
+          <a class="sign-up button button-small button-clear button-light" ui-sref="auth.signup">
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

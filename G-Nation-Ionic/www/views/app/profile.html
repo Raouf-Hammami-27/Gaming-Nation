@@ -1,0 +1,52 @@
+<ion-view class="profile-view">
+  <ion-nav-title>
+    <span>Profile</span>
+  </ion-nav-title>
+  <ion-content>
+    <div class="top-content row">
+      <div class="profile-container">
+        <div class="user-image-container">
+          <pre-img ratio="_1_1" helper-class="rounded-image">
+            <img class="user-image" ng-src="{{connectedUser.image_link}}" spinner-on-load>
+          </pre-img>
+        </div>
+        <div class="user-name">{{cnt.userName}}</div>
+        <div class="user-twitter">Account type: {{cnt.role}}</div>
+          </div>
+      <div class="user-background-image-outer">
+        <div multi-bg="['https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg']"></div>
+      </div>
+        
+    </div>
+      <div><button class="button icon-left ion-star button-energized button-clear" ng-disabled="({{connectedUser.role}}=='VIP')" ng-click="doUpgrade()" >Upgrade to a VIP Profile</button>
+          </div></div>
+    <div class="bottom-content">
+        
+        <label class="item item-input">
+        <span class="input-label">First Name</span>
+        <input type="text" ng-model="cnt.firstName" disabled>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Last Name</span>
+        <input type="text" ng-model="cnt.lastName" disabled>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="email" ng-model="cnt.email" disabled>
+      </label>
+         <label class="item item-input">
+        <span class="input-label">Ranking</span>
+        <input type="text" ng-model="cnt.ranking" disabled>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Recolted Cash</span>
+        <input type="text" ng-model="cnt.cashRecolted" disabled>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Trophies</span>
+        <input type="email" ng-model="cnt.trophies" disabled>
+      </label>
+      
+    </div>
+  </ion-content>
+</ion-view>

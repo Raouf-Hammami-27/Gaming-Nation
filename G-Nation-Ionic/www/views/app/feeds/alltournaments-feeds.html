@@ -1,0 +1,54 @@
+<ion-view class="category-feeds-view" >
+  <ion-nav-title>
+    <span>All Tourmanents</span>
+  </ion-nav-title>
+  <ion-content >
+  
+      
+      <div class="list category-feeds">
+<div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="search" placeholder="Search..." ng-model="tournament.category" size="100">
+         
+        </label>
+        
+
+      </div>
+        
+          
+      <div ng-repeat="tournament in tournaments|orderBy:tournament.date |filter:tournament.category"  class="list card post-item">
+        <div class="post-heading item item-text-wrap">
+         <div class="thumbnail-outer">
+          <pre-img ratio="_1_1" helper-class="">
+            <img class="thumbnail" ng-src={{tournament.image_link}}   spinner-on-load style="width:100px;height:50px">
+              
+          </pre-img>
+            
+        </div>
+            
+          <h2   class="post-title" ng-bind-html="tournament.name | rawHtml" Style=" text-align: right" title="name"></h2>
+          <p class="post-author" Style=" text-align: right">
+              
+          </p>
+        </div>
+        <div class="post-content item item-text-wrap" post-content>
+            <p class="post-excerpt" dynamic-anchor-fix>{{ tournament.description | limitTo: 80 }} {{tournament.description.length < 20 ? '' : '...'}}</p>
+          <div class="row">
+  <div class="col"></div>
+  <div class="col col-35">
+      <a ui-sref="app.tournament-info({tournamentId: tournament.id_tournament})" class="button icon-right ion-chevron-right button-calm button-clear">
+                Learn more
+              </a></div>
+</div>
+              
+        </div>
+      </div>
+    </div>
+      
+      
+      <!-- Infinit scroll -->
+    <ion-infinite-scroll ng-if="moreDataCanBeLoaded()" on-infinite="loadMoreData()" distance="1%" icon="ion-loading-c">
+    </ion-infinite-scroll>
+      
+  </ion-content>
+</ion-view>

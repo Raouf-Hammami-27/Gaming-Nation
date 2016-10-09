@@ -1,0 +1,53 @@
+<ion-view class="category-feeds-view">
+  <ion-nav-title>
+    <span>Top News</span>
+  </ion-nav-title>
+  <ion-content>
+      
+      
+      <div class="list category-feeds">
+        <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="search" placeholder="Name,Description..." ng-model="news.name" size="100">
+         
+        </label>
+        
+
+      </div>
+        
+          
+      <div ng-repeat="news in news|filter:news.name" class="list card post-item">
+        <div class="post-heading item item-text-wrap">
+         <div class="thumbnail-outer">
+          <pre-img ratio="_1_1" helper-class="">
+            <img class="thumbnail" ng-src={{news.link_img}}   spinner-on-load style="width:100px">
+              
+          </pre-img>
+            
+        </div>
+            
+          <h2   class="post-title" ng-bind-html="news.name | rawHtml" Style="  padding-left:60px" title="name"></h2>
+          <p class="post-author" Style=" text-align: right">
+           <span am-time-ago="news.date" ></span>
+          </p>
+        </div>
+        <div class="post-content item item-text-wrap" post-content>
+            <p class="post-excerpt" dynamic-anchor-fix>{{ news.description | limitTo: 80 }} {{news.description.length < 20 ? '' : '...'}}</p>
+          
+          <div class="row">
+  <div class="col"></div>
+  <div class="col col-35">
+              <a  ui-sref="app.news-info({gameId: news.idArticle})" class="button icon-right ion-chevron-right button-calm button-clear">
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      
+      
+      
+  </ion-content>
+</ion-view>
