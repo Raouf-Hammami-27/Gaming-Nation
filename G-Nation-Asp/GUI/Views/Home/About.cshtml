@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "About";
+    Layout = null;
+}
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+    {
+        @Html.AntiForgeryToken()
+<html>
+<head>
+    <link href="@Url.Content("~/Content/AdminCss/bootstrap.css")" rel="stylesheet" media="screen">
+    <!-- Animate CSS -->
+    <link href="@Url.Content("~/Content/AdminCss/animate.css")" rel="stylesheet" media="screen">
+    <!-- Alertify CSS -->
+    <link href="@Url.Content("~/Content/AdminCss/alertify.core.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/AdminCss/alertify.default.css")" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="@Url.Content("~/Content/AdminCss/main.css")" rel="stylesheet" media="screen">
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/AdminCss/datepicker.css")">
+    <!-- Font Awesome -->
+    <link href="@Url.Content("~/Content/AdminCss/font/font-awesome.min.css")" rel="stylesheet">
+    <link rel="shortcut icon" href="@Url.Content("~/Content/img/favicon.ico")">
+    <title>G-Nation</title>
+</head>
+<body style="background-image:url(../../Content/img/under_construction.jpg); background-size: cover;">
+    
+        <a href="javascript:document.getElementById('logoutForm').submit()">
+        <i class="fa fa-sign-out text-danger"> LogOut</i>
+    </a>
+
+</body>
+</html>
+    }
+}

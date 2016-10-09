@@ -1,0 +1,151 @@
+﻿@model GUI.Models.AddCrewViewModel
+
+@{
+    ViewBag.Title = "Add Event Organizer";
+}
+
+@section Scripts{
+    <script type="text/javascript">
+        function getFiles() {
+            // Get input element
+            myFileList = document.getElementById("myfiles");
+            // loop through files property, using length to get number of files chosen
+            for (var i = 0; i < 1; i++) {
+                // display them in the div
+
+                $("#display").val( myFileList.files[i].name) ;
+            }
+        }
+    </script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $("input").change(function(e) {
+
+    for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
+        var file = e.originalEvent.srcElement.files[i];
+
+        var img = document.createElement("img");
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            img.src = reader.result;
+            console.log( img.src);
+            $("#image").attr("src", img.src);
+        }
+        reader.readAsDataURL(file);
+    }
+});
+    });
+</script>
+
+}
+<h2> Add Event Organizer</h2>
+
+@using (Html.BeginForm("Create", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="blog">
+                <div class="blog-header">
+                    <h5 class="blog-title">Validation</h5>
+                </div>
+                <div class="blog-body">
+                    <form id="movieForm" method="post" novalidate="novalidate" class="bv-form">
+                        <div class="form-group has-feedback">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">The title is required</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">The title must be less than 200 characters long</small>
+                                </div>
+                                <div class="col-md-4 selectContainer">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Password)
+                                    </div>
+                                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="genre" data-bv-result="NOT_VALIDATED" style="display: none;">The genre is required</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.lastName, htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.lastName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
+                                    </div>
+                                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="director" data-bv-result="NOT_VALIDATED" style="display: none;">The director name is required</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="director" data-bv-result="NOT_VALIDATED" style="display: none;">The director name must be less than 80 characters long</small>
+                                </div>
+
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                    </div><small class="help-block" data-bv-validator="notEmpty" data-bv-for="website" data-bv-result="NOT_VALIDATED" style="display: none;">The website address is required</small><small class="help-block" data-bv-validator="uri" data-bv-for="website" data-bv-result="NOT_VALIDATED" style="display: none;">The website address is not valid</small>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label" })
+                                        @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                                    </div>
+                                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="trailer" data-bv-result="NOT_VALIDATED" style="display: none;">The trailer link is required</small><small class="help-block" data-bv-validator="uri" data-bv-for="trailer" data-bv-result="NOT_VALIDATED" style="display: none;">The trailer link is not valid</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                               
+                                    @Html.LabelFor(model => model.role, htmlAttributes: new { @class = "control-label" })
+                                    @Html.EditorFor(model => model.role, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @Value = "Event_Organizer" } })
+                                    @Html.ValidationMessageFor(model => model.role, "", new { @class = "text-danger" })
+
+                                </div>
+                                <small class="help-block" data-bv-validator="stringLength" data-bv-for="review" data-bv-result="NOT_VALIDATED" style="display: none;">The review must be less than 500 characters long</small>
+                            </div>
+                            </div>
+                        <br />
+                        <br />
+                        <div class="col-md-6">
+                            <div class="input-group">
+
+                                <span class="input-group-btn">
+                                    <span class="btn btn-primary btn-file">
+                                        Browse ...
+                                        @Html.TextBox("idFile", null, new { type = "file", id = "myfiles", @onchange = "getFiles()" })
+
+                                        @Html.ValidationMessageFor(model => model.image_link, "", new { @class = "text-danger" })
+                                    </span>
+                                </span>
+                                <input type="text" id="display" class="form-control" readonly />
+
+                            </div>
+                            <span class="help-block">
+                                Select the image you want to upload
+                            </span>
+                            <span class="help-block">
+                            </span>
+                        </div>
+
+                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="rating" data-bv-result="NOT_VALIDATED" style="display: none;">The rating is required</small>
+                        <button type="submit" class="btn btn-default">Create</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index_Event_Organizer")
+</div>

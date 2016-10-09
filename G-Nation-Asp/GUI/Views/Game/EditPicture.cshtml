@@ -1,0 +1,143 @@
+﻿@model GUI.Models.gameViewModels
+
+@section Scripts{
+    <script type="text/javascript">
+        function getFiles() {
+            // Get input element
+            myFileList = document.getElementById("myfiles");
+
+            // loop through files property, using length to get number of files chosen
+            for (var i = 0; i < 1; i++) {
+                // display them in the div
+
+               $('#display').val(myFileList.files[i].name) ;
+            }
+
+        }
+        function getFiless() {
+            // Get input element
+
+            myFileListt = document.getElementById("myfiless");
+            // loop through files property, using length to get number of files chosen
+
+            for (var i = 0; i < 1; i++) {
+                // display them in the div
+
+                $('#displayy').val(myFileListt.files[i].name);
+            }
+        }
+    </script>
+    <script type="text/javascript">
+
+  $(document).ready()
+
+
+
+    </script>
+
+    <script type="text/javascript">
+    function changee() {
+        $(document).ready(function () {
+            $("input#display").change(function (x) {
+
+                for (var j = 0; j < x.originalEvent.srcElement.files.length; j++) {
+                    var file = x.originalEvent.srcElement.files[j];
+
+                    var img = document.createElement("img");
+                    var reader = new FileReader();
+                    reader.onloadend = function () {
+                        img.src = reader.result;
+                        console.log(img.src);
+                        $("#imagee").attr("src", img.src);
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    }
+    </script>
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("input").change(function (e) {
+
+                for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
+                    var file = e.originalEvent.srcElement.files[i];
+
+                    var img = document.createElement("img");
+                    var reader = new FileReader();
+                    reader.onloadend = function () {
+                        img.src = reader.result;
+                        console.log(img.src);
+                        $("#image").attr("src", img.src);
+
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+
+    </script>
+
+
+
+
+}
+
+
+
+
+
+@using (Html.BeginForm("EditPicture", "Game", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+        <h4>newsViewModels</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        @Html.HiddenFor(model => model.idArticle)
+
+
+
+        <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <span class="btn btn-primary btn-file">
+                        Browse ...
+
+                        @Html.TextBox("idFile", null, new { type = "file", id = "myfiless", @onchange = "getFiless()" })
+
+                        @Html.ValidationMessageFor(model => model.link_imgg, "", new { @class = "text-danger" })
+                    </span>
+                </span>
+                <input type="text" id="displayy" class="form-control" readonly name="file2" />
+            </div>
+            <span class="help-block">
+                Select the image you want to upload
+            </span>
+            <span class="help-block">
+                <img src="~/Content/@Model.link_imgg" height="300" width="500" id="image" />
+            </span>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

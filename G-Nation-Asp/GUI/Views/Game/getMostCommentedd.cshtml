@@ -1,0 +1,175 @@
+﻿@model IEnumerable<GUI.Models.gameViewModels>
+
+@section Scripts{
+    <script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+        sparklineeGraphs();
+    });
+    function sparklineeGraphs() {
+        var $grid_color = "#e6e6e6";
+
+        var $dark_blue = "#2b3d51";
+        var $info = "#53ACDF";
+        var $info_light = "#B0D0EC";
+        var $danger = "#D66061";
+        var $danger_light = "#E9AFB0";
+        var $warning = "#ffb61c";
+        var $success = "#76BBAD";
+        var $success_light = "#C2DBAC";
+        var $yellow = "#ffee00";
+        var $facebook = "#4c66a4";
+        var $twitter = "#00acee";
+        var $linkedin = "#1a85bd";
+        var $gplus = "#dc4937";
+        var $grey = "#666666";
+
+        var $blue_one = "#74b1d4";
+        var $blue_two = "#84bad9";
+        var $blue_three = "#9bc7e0";
+        var $blue_four = "#afd2e6";
+        var $blue_five = "#badff2";
+
+        // Pie charts
+        $(function () {
+
+            $("#sparkk_1").sparkline([@ViewBag.TotalCount], {
+                type: 'pie',
+                sliceColors: [$warning],
+            });
+
+            $("#spark_0").sparkline([@ViewBag.gmCount, @ViewBag.notcommented ], {
+                type: 'pie',
+                sliceColors: [$blue_one, $blue_five],
+                width: '136px ',
+                height: '136px'
+            });
+        });
+    }
+
+    //Resize charts and graphs on window resize
+    $(document).ready(function () {
+        $(window).resize(function () {
+            sparklineGraphs();
+        });
+    });
+
+    </script>
+
+}
+
+
+
+
+
+<h2>getMostCommented</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="blog blog-success no-margin">
+            <div class="blog-header">
+                <h5 class="blog-title">Sales Stats</h5>
+            </div>
+            <div class="blog-body">
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered no-margin">
+                        <tbody>
+                            <tr>
+
+
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.link_img)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.name)
+                                </th>
+
+                                <th>
+                                    Comments Number
+                                </th>
+
+                                <th rowspan="5" class="center-align-text">
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+
+                                            <span class="badge badge-info">
+                                                Most Commented Games
+                                            </span>
+
+                                            <br />
+                                            <br />
+
+                                            <span class="badge badge-success">
+                                                Not Commented Games
+                                            </span>
+                                            <br />
+                                            <br />
+                                            Total
+                                            <span class="chart" id="sparkk_1"></span>
+
+
+                                        </div>
+
+                                        <div class="col-md-4">
+
+                                            <div class="chart" id="spark_0"></div>
+
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </th>
+                            </tr>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+
+
+                                    <td>
+                                        <img src="~/Content/@item.link_img" height="50" />
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.name)
+                                    </td>
+                                    <td>
+                                        @item.commentts.Count()
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*@{
+        var myChart = new Chart(width: 900, height: 600)
+            .AddTitle("statistics of packs components")
+            .AddSeries(
+                name: "Employee",
+                xValue: new[] { "confirmed packs", "hotels", "clinics", "insurance offers" },
+                yValues: new[] { "2", "6", "5", "7" })
+            .Write();
+
+    }*@

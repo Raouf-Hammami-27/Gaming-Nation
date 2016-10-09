@@ -1,0 +1,53 @@
+﻿@model GUI.Models.ExternalLoginConfirmationViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "_login.cshtml";
+
+}
+
+@using (Html.BeginForm("ExternalLoginConfirmation", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div id="register" class="show">
+        <div class="login-header">
+            <h4>Associate your @ViewBag.LoginProvider account.</h4>
+        </div>
+        <form>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <p class="text-info">
+                You've successfully authenticated with <strong>@ViewBag.LoginProvider</strong>.
+                Please enter a user name for this site below and click the Register button to finish
+                logging in.
+            </p>
+            <div class="form-group has-feedback">
+                @Html.LabelFor(m => m.Username, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group has-feedback">
+                @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group has-feedback">
+                @Html.LabelFor(m => m.HomeTown, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.HomeTown, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.HomeTown)
+            </div>
+            <div class="form-group has-feedback">
+                @Html.LabelFor(m => m.BirthDate, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.BirthDate, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.BirthDate)
+            </div>
+            <div class="form-group has-feedback">
+                    <input type="submit" class="btn btn-danger btn-lg btn-block" value="Register" />
+            </div>
+            </form>
+        </div>
+            }
+
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }

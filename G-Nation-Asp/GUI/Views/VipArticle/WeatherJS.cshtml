@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "WeatherJS";
+}
+<h2>WeatherJS</h2>
+<p id="name"></p>
+<p id="temp"></p>
+<p id="humidity"></p>
+<button>Get weather</button>
+<script>
+   
+    var appid = "98e1c07f21a31fa35f8fccc32bbfc64e";
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.get("http://api.openweathermap.org/data/2.5/weather?q=Ariana&APPID=" + appid + "&units=imperial", function (response) {
+                //response
+                console.log(response);
+                $("#name").text(response.name);
+                $("#temp").text(response.main.temp);
+                $("#humidity").text(response.main.humidity);
+
+            });
+        });
+    });
+
+</script>

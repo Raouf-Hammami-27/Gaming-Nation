@@ -1,0 +1,194 @@
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Service.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Service.pdb
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_DATA.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Domain.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\EntityFramework.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_DATA.pdb
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Domain.pdb
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\EntityFramework.xml
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\obj\Debug\TAG_Service.csprojResolveAssemblyReference.cache
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\obj\Debug\TAG_Service.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\obj\Debug\TAG_Service.pdb
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Service.Pattern.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Service.Pattern.pdb
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Owin.dll
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\Jim Page\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Service.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Service.pdb
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Owin.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_DATA.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Domain.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Service.Pattern.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\EntityFramework.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_DATA.pdb
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Domain.pdb
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\TAG_Service.Pattern.pdb
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\bin\Debug\EntityFramework.xml
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\obj\Debug\TAG_Service.csprojResolveAssemblyReference.cache
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\obj\Debug\TAG_Service.dll
+C:\Users\My Name Is\documents\visual studio 2015\Projects\TAG\TAG_Service\obj\Debug\TAG_Service.pdb
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Data.Edm.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Data.OData.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Data.Services.Client.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\System.Spatial.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Azure.KeyVault.Core.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Data.Edm.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Data.OData.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Data.Services.Client.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.WindowsAzure.Storage.pdb
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\System.Spatial.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\de\Microsoft.Data.OData.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\es\Microsoft.Data.OData.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\it\Microsoft.Data.OData.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\de\System.Spatial.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\es\System.Spatial.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\fr\System.Spatial.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\it\System.Spatial.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ja\System.Spatial.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ko\System.Spatial.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\ru\System.Spatial.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\zh-Hans\System.Spatial.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Owin.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\System.Web.Http.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\System.Web.Http.Owin.dll
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Owin.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\System.Web.Http.xml
+C:\Users\Jim Page\Documents\Visual Studio 2015\Projects\TAG\TAG_Service\bin\Debug\System.Web.Http.Owin.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\TAG_Service.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\TAG_Service.pdb
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Data.Edm.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Data.OData.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Data.Services.Client.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Owin.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Owin.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\System.Spatial.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\System.Web.Http.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\System.Web.Http.Owin.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\TAG_DATA.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\TAG_Domain.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\TAG_Service.Pattern.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\EntityFramework.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\TAG_DATA.pdb
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\TAG_Domain.pdb
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\TAG_Service.Pattern.pdb
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Azure.KeyVault.Core.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Data.Edm.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Data.OData.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Data.Services.Client.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Owin.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.WindowsAzure.Storage.pdb
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\System.Spatial.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\System.Web.Http.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\System.Web.Http.Owin.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\EntityFramework.xml
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\de\Microsoft.Data.OData.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\es\Microsoft.Data.OData.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\it\Microsoft.Data.OData.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\de\System.Spatial.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\es\System.Spatial.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\fr\System.Spatial.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\it\System.Spatial.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ja\System.Spatial.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ko\System.Spatial.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\ru\System.Spatial.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\zh-Hans\System.Spatial.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\obj\Debug\TAG_Service.csprojResolveAssemblyReference.cache
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\obj\Debug\TAG_Service.dll
+C:\Users\My Name Is\Desktop\TAG\TAG\TAG_Service\obj\Debug\TAG_Service.pdb

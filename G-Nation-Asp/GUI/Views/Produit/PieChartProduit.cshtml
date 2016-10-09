@@ -1,0 +1,12 @@
+﻿
+@{
+
+    var myChart = new Chart(width: 600, height: 400)
+      .AddTitle("nombre produit")
+      .AddSeries(chartType: "Pie",
+         xValue: ViewBag.nbrusers, xField: "nbre user",
+         yValues: ViewBag.nbrProduit, yFields: "nbre produit")
+      .Write();
+}
+
+

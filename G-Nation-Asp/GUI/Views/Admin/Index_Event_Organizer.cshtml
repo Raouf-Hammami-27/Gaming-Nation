@@ -1,0 +1,105 @@
+﻿@model IEnumerable<GUI.Models.AddCrewViewModel>
+
+
+
+@section Scripts{
+    <script src="@Url.Content("~/Content/AdminJs/jquery.js")"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="@Url.Content("~/Content/AdminJs/bootstrap.min.js")"></script>
+    <!-- Sparkline graphs -->
+    <script src="@Url.Content("~/Content/AdminJs/sparkline.js")"></script>
+    <!-- Data tables -->
+    <script src="@Url.Content("~/Content/AdminJs/jquery.datatables.js")"></script>
+    <!-- jquery ScrollUp JS -->
+    <script src="@Url.Content("~/Content/AdminJs/scrollup/jquery.scrollUp.js")"></script>
+    <!-- Custom Index -->
+    <script src="@Url.Content("~/Content/AdminJs/custom.js")"></script>
+    <script src="@Url.Content("~/Content/AdminJs/custom-datatables.js")"></script>
+}
+
+<!-- Spacer starts -->
+<div class="spacer">
+
+    <!-- Row Starts -->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Event Organizers</h4>
+                </div>
+
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <div id="dt_example" class="table-responsive example_alt_pagination clearfix">
+                            <div class="dataTables_filter" id="data-table_filter">
+                                <button type="button" class="btn btn-info"><i class="fa fa-plus"></i> @Html.ActionLink("Create New", "Create")</button>
+
+                                <table class="table no-margin table-condensed table-striped table-hover pull-left" id="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.image_link)
+
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.lastName)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.FirstName)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Email)
+                                            </th>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.username)
+                                            </th>
+                                           
+                                           
+                                            <th>Options</th>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (var item in Model.Where(i => i.role == "Event_Organizer"))
+                                        {
+                                            <tr class="gradeU">
+                                                <td>
+                                                    <img src="~/Content/@item.image_link" height="100" />
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.lastName)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.FirstName)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Email)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.username)
+                                                </td>
+                                                
+                                               
+
+                                                <td>
+                                                    <div class="fa fa-list">        @Html.ActionLink("Details", "Details", new { id = item.Id }) </div>|
+
+                                                    <div class="fa fa-trash-o">    @Html.ActionLink("Delete", "Delete", new { id = item.Id })</div>
+
+                                                </td>
+                                                
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row Ends -->
+    </div>
+    <!-- Spacer ends -->
+</div>
+<!-- Container fluid ends -->

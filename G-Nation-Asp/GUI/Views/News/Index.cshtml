@@ -1,0 +1,141 @@
+﻿@model IEnumerable<GUI.Models.newsViewModels>
+
+@{
+    ViewBag.Title = "Index";
+   
+}
+@section Scripts{
+    <script src="@Url.Content("~/Content/AdminJs/jquery.js")"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="@Url.Content("~/Content/AdminJs/bootstrap.min.js")"></script>
+    <!-- Sparkline graphs -->
+    <script src="@Url.Content("~/Content/AdminJs/sparkline.js")"></script>
+    <!-- Data tables -->
+    <script src="@Url.Content("~/Content/AdminJs/jquery.datatables.js")"></script>
+    <!-- jquery ScrollUp JS -->
+    <script src="@Url.Content("~/Content/AdminJs/scrollup/jquery.scrollUp.js")"></script>
+    <!-- Custom Index -->
+    <script src="@Url.Content("~/Content/AdminJs/custom.js")"></script>
+    <script src="@Url.Content("~/Content/AdminJs/custom-datatables.js")"></script>
+}
+
+
+<!-- Spacer starts -->
+<div class="spacer">
+
+    <!-- Row Starts -->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">News</h4>
+                </div>
+
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <div id="dt_example" class="table-responsive example_alt_pagination clearfix">
+                            <div class="dataTables_filter" id="data-table_filter">
+
+
+                                <button type="button" class="btn btn-info"><i class="fa fa-plus"></i>@Html.ActionLink("Create New", "Create")</button>
+                                <table class="table no-margin table-condensed table-striped table-hover pull-left" id="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.name)
+                                            </th>
+
+                                           
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.link_img)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.date)
+                                            </th>
+
+
+                                           
+
+                                            <th>Options</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr class="gradeU">
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.name)
+                                                </td>
+                                                
+                                                <td>
+                                                    <img src="~/Content/@item.link_img" height="100" />
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.date)
+                                                </td>
+                                               
+                                                <td>
+
+                                                    <div class="fa fa-pencil"> @Html.ActionLink("Edit", "Edit", new { id = item.idArticle }) </div> |
+                                                    <div class="fa fa-list"> @Html.ActionLink("Details", "Details", new { id = item.idArticle }) </div> |
+                                                    <div class="fa fa-trash-o">  @Html.ActionLink("Delete", "Delete", new { id = item.idArticle }) </div>
+                                                    
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row Ends -->
+    </div>
+    <!-- Spacer ends -->
+</div>
+<!-- Container fluid ends -->
+<div class="current-stats">
+    <div class="row">
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+            <div class="danger-bg center-align-text">
+                <div class="spacer-xs">
+                    <i class="fa fa-dedent"></i>
+                    <small class="text-white">Article</small>
+                    <h3 class="no-margin no-padding"> @ViewBag.Article</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+            <div class="success-bg center-align-text">
+                <div class="spacer-xs">
+                    <i class="fa fa-gamepad"></i>
+                    <small class="text-white">Games</small>
+                    <h3 class="no-margin no-padding text-white">@ViewBag.games </h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+            <div class="info-bg center-align-text">
+                <div class="spacer-xs">
+                    <i class="fa fa-hacker-news"></i>
+                    <small class="text-white">News</small>
+                    <h3 class="no-margin no-padding"> @ViewBag.news</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+            <div class="brown-bg center-align-text">
+                <div class="spacer-xs">
+                    <i class="fa fa-comments-o"></i>
+                    <small class="text-white">Most Commented games</small>
+                    <h3 class="no-margin no-padding">@ViewBag.commnewss @Html.ActionLink("+", "getMostCommented")</h3>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</div>

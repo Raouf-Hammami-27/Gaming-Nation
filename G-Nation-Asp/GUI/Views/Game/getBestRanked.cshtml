@@ -1,0 +1,289 @@
+﻿@model IEnumerable<GUI.Models.gameViewModels>
+
+@{
+    ViewBag.Title = "getBestRanked";
+}
+
+
+@section Scripts{
+
+<script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+        sparklineeGraphs();
+    });
+    function sparklineeGraphs() {
+        var $grid_color = "#e6e6e6";
+
+        var $dark_blue = "#2b3d51";
+        var $info = "#53ACDF";
+        var $info_light = "#B0D0EC";
+        var $danger = "#D66061";
+        var $danger_light = "#E9AFB0";
+        var $warning = "#ffb61c";
+        var $success = "#76BBAD";
+        var $success_light = "#C2DBAC";
+        var $yellow = "#ffee00";
+        var $facebook = "#4c66a4";
+        var $twitter = "#00acee";
+        var $linkedin = "#1a85bd";
+        var $gplus = "#dc4937";
+        var $grey = "#666666";
+
+        var $blue_one = "#74b1d4";
+        var $blue_two = "#84bad9";
+        var $blue_three = "#9bc7e0";
+        var $blue_four = "#afd2e6";
+        var $blue_five = "#badff2";
+
+        // Pie charts
+        $(function () {
+
+            $("#sparkk_1").sparkline([@ViewBag.totalGames], {
+                type: 'pie',
+                sliceColors: [$warning],
+            });
+
+            $("#spark_0").sparkline([@ViewBag.ratedGams, @ViewBag.NoRatedGames], {
+                type: 'pie',
+                sliceColors: [$blue_one, $blue_five],
+                width: '136px ',
+                height: '136px'
+            });
+        });
+    }
+
+    //Resize charts and graphs on window resize
+    $(document).ready(function () {
+        $(window).resize(function () {
+            sparklineGraphs();
+        });
+    });
+
+</script>
+
+
+                      <script>
+
+
+
+
+    var $border_color = "#eee";
+    var $grid_color = "#eee";
+    var $default_black = "#666";
+
+    var $info = "#5B90BF";
+    var $danger = "#D66061";
+    var $warning = "#ffaa3a";
+    var $success = "#76BBAD";
+    var $yellow = "#ffee00";
+    var $facebook = "#4c66a4";
+    var $twitter = "#00acee";
+    var $linkedin = "#1a85bd";
+    var $gplus = "#dc4937";
+    var $brown = "#ab7967";
+
+    $(function () {
+
+        var d1,  data, chartOptions;
+
+        @*d1 = [
+                [1325376000000, @ViewBag.nbComm1], [1328054400000, @ViewBag.nbComm2], [1330560000000,  @ViewBag.nbComm3], [1333238400000, @ViewBag.nbComm4],
+                [1335830400000, @ViewBag.nbComm5]
+        ];*@
+
+        var d1 = [[1262304000000, @ViewBag.nbComm1], [1264982400000,  @ViewBag.nbComm2], [1267401600000, @ViewBag.nbComm3], [1270080000000, @ViewBag.nbComm4], [1272672000000, @ViewBag.nbComm5], [1275350400000, @ViewBag.nbComm6], [1277942400000, @ViewBag.nbComm7], [1280620800000, @ViewBag.nbComm8], [1283299200000, @ViewBag.nbComm9], [1285891200000, @ViewBag.nbComm10], [1288569600000, @ViewBag.nbComm11], [1291161600000, @ViewBag.nbComm12]];
+
+
+
+
+        data = [{
+            label: 'ratings',
+            data: d1
+        }];
+
+        chartOptions = {
+            xaxis: {
+                min: (new Date(2009, 11)).getTime(),
+                max: (new Date(2010, 11)).getTime(),
+                mode: "time",
+                tickSize: [1, "month"],
+                monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                tickLength: 0
+            },
+            yaxis: {
+                min: 0,
+                max: 50,
+
+            },
+            grid: {
+                hoverable: true,
+                clickable: false,
+                borderWidth: 1,
+                tickColor: $border_color,
+                borderColor: $grid_color,
+            },
+            series: {
+                stack: true
+            },
+            bars: {
+                show: true,
+                barWidth: 36 * 24 * 60 * 60 * 300,
+                fill: true,
+                align: 'center',
+                lineWidth: 1,
+                lineWidth: 0,
+                fillColor: { colors: [{ opacity: 0.8 }, { opacity: 0.6 }] }
+            },
+            shadowSize: 0,
+            tooltip: true,
+            tooltipOpts: {
+                content: '%s: %y'
+            },
+            colors: [$success, $info, $danger],
+        }
+
+        var holder = $('#stacked-vertical-chart');
+
+        if (holder.length) {
+            $.plot(holder, data, chartOptions);
+        }
+
+
+
+    });
+
+
+
+
+                      </script>
+
+
+
+}
+
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="blog blog-success no-margin">
+            <div class="blog-header">
+                <h5 class="blog-title">Rating Stats</h5>
+            </div>
+            <div class="blog-body">
+                <div class="table-responsive">
+                    <table class="table table-condensed table-bordered no-margin">
+                        <tbody>
+                            <tr>
+                                
+                              
+                              
+                                <th>
+                                    Image
+                                </th>
+                               
+                                <th>
+                                    @Html.DisplayNameFor(model => model.name)
+                                </th>
+                              
+                                <th>
+                                    @Html.DisplayNameFor(model => model.category)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.rating)
+                                </th>
+                                
+
+
+                                <th rowspan="20" class="center-align-text" align="center">
+                                    <div class="row" >
+
+                                        <div class="col-md-4">
+
+                                            <span class="badge badge-info">
+                                                 Ranked Games
+                                            </span>
+
+                                            <br />
+                                            <br />
+
+                                            <span class="badge badge-success">
+                                                Not Rnaked Games
+                                            </span>
+                                            <br />
+                                            <br />
+                                            Total
+                                            <span class="chart" id="sparkk_1"></span>
+
+
+                                        </div>
+
+                                        <div class="col-md-4">
+
+                                            <div class="chart" id="spark_0"></div>
+
+
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                </th>
+                            </tr>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    
+                                    <td>
+                                        <img src="~/Content/@item.link_img" height="50" />
+                                    </td>
+                                   
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.name)
+                                    </td>
+                                   
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.category)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.rating)
+                                    </td>
+                                    
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+    <div class="blog">
+        <div class="blog-header">
+            <h5 class="panel-title">Ratings by Month</h5>
+        </div>
+        <div class="blog-body">
+            <div id="stacked-vertical-chart" class="chart-height"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+    <div class="info-bg center-align-text">
+        <div class="spacer-xs">
+            <i class="fa fa-thumbs-o-up"></i>
+            <small class="text-white">number of Ranking</small>
+            <h3 class="no-margin no-padding"> @ViewBag.totalrattess</h3>
+        </div>
+    </div>
+</div>

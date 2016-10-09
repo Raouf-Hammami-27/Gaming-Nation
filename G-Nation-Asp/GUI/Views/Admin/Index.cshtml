@@ -1,0 +1,11 @@
+﻿@model IEnumerable<GUI.Models.AddCrewViewModel>
+    
+@section Scripts{}
+@section Styles{}
+
+<div class="container-fluid">
+    <!-- Current Stats Start -->
+    @Html.Action("Statistics", new GUI.Models.AddCrewViewModel { });
+    <!-- Current Stats End -->
+
+</div>

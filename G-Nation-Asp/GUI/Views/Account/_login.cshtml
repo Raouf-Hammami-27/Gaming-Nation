@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from jesus.gallery/everest/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Nov 2015 15:00:03 GMT -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="G-NAtion Admin Panel" />
+    <meta name="keywords" content="Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap" />
+    <meta name="author" content="Bootstrap Gallery" />
+    <link rel="shortcut icon" href="@Url.Content("~/Content/img/favicon.ico")">
+    <title>G-Nation</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="@Url.Content("~/Content/AdminCss/bootstrap.css")" rel="stylesheet" media="screen">
+    <!-- Animate CSS -->
+    <link href="@Url.Content("~/Content/AdminCss/animate.css")" rel="stylesheet" media="screen">
+    <!-- Main CSS -->
+    <link href="@Url.Content("~/Content/AdminCss/main.css")" rel="stylesheet" media="screen">
+    <!-- Main CSS -->
+    <link href="@Url.Content("~/Content/AdminCss/login.css")" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="@Url.Content("~/Content/AdminCss/font/font-awesome.min.css")" rel="stylesheet">
+    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var body = $('body');
+            var backgrounds = [
+            'url("../Content/img/loginBg/bg1.jpg")',
+            'url("../Content//img/loginBg/bg2.jpg")',
+            'url("../Content//img/loginBg/bg3.jpg")',
+            'url("../Content//img/loginBg/bg4.jpg")',
+            'url("../Content//img/loginBg/bg5.jpg")',
+            'url("../Content//img/loginBg/bg6.jpg")',
+            'url("../Content//img/loginBg/bg7.jpg")',
+            'url("../Content//img/loginBg/bg8.jpg")'];
+            var current = 0;
+
+            function nextBackground() {
+                body.css(
+                    'background-image',
+                backgrounds[current = ++current % backgrounds.length]);
+
+                setTimeout(nextBackground, 5000);
+            }
+            setTimeout(nextBackground, 5000);
+            body.css('background-image', backgrounds[0]);
+            body.fadeIn(1500);
+        });
+    </script>
+</head>
+<body  id="dvImage">
+        <!-- Container Fluid starts -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-push-4 col-md-4 col-sm-push-3 col-sm-6 col-sx-12">
+
+                    <!-- Header end -->
+                    <div class="login-container">
+                        <div class="login-wrapper animated flipInY">
+                            @RenderBody()
+
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container Fluid ends -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="@Url.Content("~/Content/AdminJs/jquery.js")"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="@Url.Content("~/Content/AdminJs/bootstrap.min.js")"></script>
+
+        <script type="text/javascript">
+            (function ($) {
+                // constants
+                var SHOW_CLASS = 'show',
+					HIDE_CLASS = 'hide',
+					ACTIVE_CLASS = 'active';
+
+                $('a').on('click', function (e) {
+                    e.preventDefault();
+                    var a = $(this),
+					href = a.attr('href');
+
+                    $('.active').removeClass(ACTIVE_CLASS);
+                    a.addClass(ACTIVE_CLASS);
+
+                    $('.show')
+					.removeClass(SHOW_CLASS)
+					.addClass(HIDE_CLASS)
+					.hide();
+
+                    $(href)
+					.removeClass(HIDE_CLASS)
+					.addClass(SHOW_CLASS)
+					.hide()
+					.fadeIn(550);
+                });
+            })(jQuery);
+        </script>
+        @RenderSection("Scripts", required: false);
+    </div>
+</body>
+<!-- Mirrored from jesus.gallery/everest/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Nov 2015 15:00:03 GMT -->
+</html>
