@@ -1,0 +1,2 @@
+# Gaming-Nation
+In order to help amateurs or gamers, a much powerful way to discover, get informed for new games, and follow events and tournaments through a new software platform. A project develops by the group “the games”. Leaders as part of Integrated Project Module within ESPRIT. Our project named “Tunisian Association of Gamers” that will create a suitable platform to users ‘amateurs or gamers. It gives them the opportunity to confront issues to bring the institutions to take the necessary measures and improve its work.
