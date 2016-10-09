@@ -4,10 +4,13 @@ In order to help amateurs or gamers, a much powerful way to discover, get inform
 * Ameni Jmaiel : 
   * website : http://www.ameni-jmaiel.info
   * email :   jmaielameni@gmail.com
+  * github : https://github.com/ameniJmaiel
 * Mehdi Hannachi : 
   * website : http://www.mehdi-hannachi.me/
   * email :   contact@mehdi-hannachi.me - mahdi.hannachi@esprit.tn
+  * github : https://github.com/mehdihannachi
 * Raouf Hammami : 
   * website : http://www.raouf-hammami.info 
   * email :   contact@raouf-hammami.info - hammamiraouf30@gmail.com
+  * github : https://github.com/Raouf-Hammami-27
    
