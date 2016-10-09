@@ -1,0 +1,53 @@
+<ion-view class="category-feeds-view">
+  <ion-nav-title>
+    <span>Best Games </span>
+  </ion-nav-title>
+  <ion-content>
+    
+      
+       <div class="list category-feeds">
+            <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="search" placeholder="Name,Category,Description..." ng-model="article.category" size="100">
+         
+        </label>
+        
+
+      </div>
+           
+      <div ng-repeat="article in games|filter:article.category" class="list card post-item">
+        <div class="post-heading item item-text-wrap">
+         <div class="thumbnail-outer">
+          <pre-img ratio="_1_1" helper-class="">
+            <img class="thumbnail" ng-src={{article.link_img}}   spinner-on-load style="width:150px">
+              
+          </pre-img>
+            
+        </div>
+            
+          <h2   class="post-title" ng-bind-html="article.name | rawHtml" Style=" text-align: right"></h2>
+          <p class="post-author" Style=" text-align: right">
+           <span am-time-ago="article.date" ></span>
+          </p>
+        </div>
+        <div class="post-content item item-text-wrap" post-content>
+          <p class="post-excerpt" dynamic-anchor-fix ng-bind-html="article.description | rawHtml"></p>
+          <div class="post-actions row">
+            <div class="actions col col-center col-66">
+              <a class="button button-icon icon ion-bookmark" ng-click="bookmarkPost(post)"></a>
+            </div>
+            <div class="read-more col col-center col-33">
+              <a ui-sref="app.game-info({gameId: article.idArticle,gameRating:article.rating})" class="button button-small button-block button-assertive"  >
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      
+      
+      
+  </ion-content>
+</ion-view>

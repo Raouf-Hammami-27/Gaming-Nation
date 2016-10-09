@@ -1,0 +1,28 @@
+<ion-view class="post-view">
+  <ion-content>
+    <div class="post-heading item item-text-wrap">
+      <h1 class="post-title">{{tournament.name}}</h1>
+
+    </div>
+    <div class="post-content item item-text-wrap" post-content>
+      <p class="post-text" dynamic-anchor-fix ng-bind-html="tournament.description | rawHtml">
+        </p>          
+        <youtube-video video-id="videoId" player="yt_video" player-vars="playerVars"><iframe class="youtube-player" type="text/html" width="640" height="385" ng-src="{{trustSrc(tournament.broadcast_link)}}" allowfullscreen frameborder="0">    
+</iframe></youtube-video>
+          <div><iframe src="http://challonge.com/fr/TDLbyGIGABYTE/module" width="140" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe></div>
+    </div>
+      
+    
+  
+  </ion-content>
+  <ion-footer-bar class="post-footer bar bar-footer bar-dark">
+    <div class="row">
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon icon-right ion-plus" bigger-text=".post-view .post-text">A</a>
+      </div>
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon icon-right ion-minus" smaller-text=".post-view .post-text">A</a>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

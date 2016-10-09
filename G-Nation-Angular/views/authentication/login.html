@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="G-Nation Client Panel" />
+  <meta name="keywords" content="Client, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap" />
+  <meta name="author" content="Bootstrap Gallery" />
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+
+  <title>G-Nation</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="../../content/AdminCss/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="../../content/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../../content/css/social-buttons.css" rel="stylesheet" />
+  <!-- Animate CSS -->
+  <link href="../../content/AdminCss/animate.css" rel="stylesheet" media="screen">
+  <!-- Main CSS -->
+  <link href="../../content/AdminCss/main.css" rel="stylesheet" media="screen">
+  <!-- Main CSS -->
+  <link href="../../content/AdminCss/login.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../../content/AdminCss/font/font-awesome.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../../content/img/favicon.ico">
+  <link href="../../content/css/loading-bar.css" rel="stylesheet" />
+
+  <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular-route/angular-route.min.js"></script>
+  <script src="lib/angular-local-storage.min.js"></script>
+  <script src="lib/loading-bar.min.js"></script>
+
+  <!-- Load app main script -->
+  <script src="js/app.js"></script>
+  <!-- Load services -->
+  <script src="js/factories.js"></script>
+  <!-- Load controllers -->
+  <script src="js/controllers.js"></script>
+
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      var body = $('body');
+      var backgrounds = [
+        'url("../../content/img/loginBg/bg1.jpg")',
+        'url("../../content//img/loginBg/bg2.jpg")',
+        'url("../../content//img/loginBg/bg3.jpg")',
+        'url("../../content//img/loginBg/bg4.jpg")',
+        'url("../../content//img/loginBg/bg5.jpg")',
+        'url("../../content//img/loginBg/bg6.jpg")',
+        'url("../../content//img/loginBg/bg7.jpg")',
+        'url("../../content//img/loginBg/bg8.jpg")'
+      ];
+      var current = 0;
+
+      function nextBackground() {
+        body.css(
+          'background-image',
+          backgrounds[current = ++current % backgrounds.length]);
+
+        setTimeout(nextBackground, 5000);
+      }
+      setTimeout(nextBackground, 5000);
+      body.css('background-image', backgrounds[0]);
+      body.fadeIn(1500);
+    });
+  </script>
+</head>
+
+<body id="dvImage" data-ng-controller="loginController">
+  <!-- Container Fluid starts -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-push-4 col-md-4 col-sm-push-3 col-sm-6 col-sx-12">
+
+        <!-- Header end -->
+        <div class="login-container" >
+          <div class="login-wrapper animated flipInY">
+            <div id="login" class="show">
+              <div class="login-header">
+                <h4>Log In</h4>
+              </div>
+              <br>
+              <input type="text" class="form-control" placeholder="Username" data-ng-model="loginData.userName" required autofocus>
+              <br>
+              <input type="password" class="form-control" placeholder="Password" data-ng-model="loginData.password" required>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" data-ng-model="loginData.useRefreshTokens"><strong> Use Refresh Tokens</strong>
+                </label>
+              </div>
+
+              <br>
+              <button class="btn btn-warning btn-lg" type="submit" data-ng-click="login()">Login</button>
+              <br>
+              <br>
+              <div data-ng-hide="message == ''" class="alert alert-danger">
+                {{message}}
+              </div>
+
+              <br>
+              <span>Don't have an account?</span>
+              <button class="btn btn-success" href="#/signup" data-ng-click="sign()">Sign Up</button>
+
+              <br>
+              <br>
+              <section id="socialLoginForm">
+                <button class="btn btn-large btn-facebook " type="button" data-ng-click="fbLogin()"><i class="fa fa-facebook"></i> Facebook</button>
+                  <!--<button class="btn btn-large btn-facebook " type="button" data-ng-click="authExternalProvider('Facebook')"><i class="fa fa-facebook"></i> Facebook</button>-->
+
+                <button class="btn btn-large btn-google-plus" type="button" data-ng-click="gplusLogin()"><i class="fa fa-google-plus"></i> Google+</button>
+                <br>
+                <br>
+                <button class="btn btn-large btn-instagram" type="button" data-ng-click=""><i class="fa fa-instagram"></i> Facial Authentication</button>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Container Fluid ends -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../content/AdminJs/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../content/AdminJs/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      (function($) {
+        // constants
+        var SHOW_CLASS = 'show',
+          HIDE_CLASS = 'hide',
+          ACTIVE_CLASS = 'active';
+
+        $('a').on('click', function(e) {
+          e.preventDefault();
+          var a = $(this),
+            href = a.attr('href');
+
+          $('.active').removeClass(ACTIVE_CLASS);
+          a.addClass(ACTIVE_CLASS);
+
+          $('.show')
+            .removeClass(SHOW_CLASS)
+            .addClass(HIDE_CLASS)
+            .hide();
+
+          $(href)
+            .removeClass(HIDE_CLASS)
+            .addClass(SHOW_CLASS)
+            .hide()
+            .fadeIn(550);
+        });
+      })(jQuery);
+    </script>
+  </div>
+</body>
+</html>

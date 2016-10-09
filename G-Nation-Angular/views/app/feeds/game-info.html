@@ -1,0 +1,60 @@
+<ion-view class="post-view"  >
+  <ion-content>
+    <div class="post-heading item item-text-wrap">
+      <h1 class="post-title">{{article.name}}</h1>
+       <p class="post-author" Style=" text-align: right">
+           
+           <span> {{article.date |  date:'yyyy-MM-dd'}} </span>
+          </p>  
+        
+      <h3>Category : {{article.category }}</h3>
+      
+    </div>
+    <div class="post-content item item-text-wrap" post-content>
+      <p class="post-text" dynamic-anchor-fix ng-bind-html="article.description | rawHtml"></p>
+    
+    
+      <div class="row">
+  <div class="col"><h3>Rates :{{article.rating}}/5 </h3></div>
+          <div class="col"><ionic-ratings ratingsobj='MyratingsObject' ></ionic-ratings></div> </div>
+      
+      
+      
+     
+      
+    <ion-slide-box show-pager="true" auto-play="true">
+        <div class="list card">
+          <div class="item item-image">
+              <img ng-src={{article.link_imgg}}>
+            
+          </div>
+        </div>
+       
+    </ion-slide-box>
+<div class="row">
+  
+    <div class="col">
+        <ionic-ratings ratingsobj='ratingsObject' ></ionic-ratings></div>
+   
+    <div class="col">
+       <button type="submit" class="button icon-lef ion-ios-star-outline button-positive button-block" ng-click="doRate()">Rate it</button></div>
+</div>
+        <a ui-sref="app.comments-feeds({gameId: article.idArticle})" class="button icon-lef ion-ios-list-outline button-small button-block button-dark button-outline"  >
+               Comments
+              </a>
+    
+      </div>
+    
+  
+  </ion-content>
+  <ion-footer-bar class="post-footer bar bar-footer bar-dark">
+    <div class="row">
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon icon-right ion-plus" bigger-text=".post-view .post-text">A</a>
+      </div>
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon icon-right ion-minus" smaller-text=".post-view .post-text">A</a>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

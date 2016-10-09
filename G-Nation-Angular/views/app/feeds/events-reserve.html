@@ -1,0 +1,46 @@
+<ion-view class="post-view">
+  <ion-content>
+    <div class="post-heading item item-text-wrap">
+      <h1 class="post-title">{{event.name}}</h1>
+        
+      <div class="item item-image">
+            <img ng-src="{{event.image_link}}">
+          </div>
+      <p class="post-author">
+        Date: <span>{{event.date}}</span> <span am-time-ago="post.date"></span>
+      </p>
+    </div>
+    <div class="post-content item item-text-wrap" post-content>
+      <p class="post-text" dynamic-anchor-fix ng-bind-html="event.description | rawHtml"></p>
+    </div>
+    <ion-slide-box show-pager="true">
+      <ion-slide ng-repeat="i in [1,2,3,4,5]">
+        <div class="list card">
+          <div class="item item-image">
+            <img ng-src="http://lorempixel.com/300/200/nature?v={{i}}">
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+     <div class="post-tags item item-text-wrap">
+      <a ui-sref="app.tournaments-feeds({eventId: event.id_event})" class="post-tag button button-small button-outline button-stable">Events tournaments</a>
+    </div>
+      
+      <button type="submit" class="button button-positive button-block" ng-click="doReserve()" ng-disabled="(selected_tab=='Email') ? (login_form.user_email.$invalid || login_form.user_password.$invalid) : ((selected_tab=='Phone') ? (login_form.user_phone.$invalid || login_form.user_pin.$invalid) : false)">
+                Log In
+              </button>
+      
+    
+  
+  </ion-content>
+  <ion-footer-bar class="post-footer bar bar-footer bar-dark">
+    <div class="row">
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon icon-right ion-plus" bigger-text=".post-view .post-text">A</a>
+      </div>
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon icon-right ion-minus" smaller-text=".post-view .post-text">A</a>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

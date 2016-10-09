@@ -1,0 +1,55 @@
+<ion-view class="category-feeds-view" >
+  <ion-nav-title>
+    <span>Events List</span>
+  </ion-nav-title>
+  <ion-content >
+  
+      
+      <div class="list category-feeds">
+        <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="search" placeholder="search..." ng-model="event.category" size="100">
+         
+        </label>
+        
+
+      </div>
+        
+          
+      <div ng-repeat="event in events|orderBy:event.date |filter:event.category" class="list card post-item">
+        <div class="post-heading item item-text-wrap">
+         <div class="thumbnail-outer">
+          <pre-img ratio="_1_1" helper-class="">
+            <img class="thumbnail" ng-src={{event.image_link}}   spinner-on-load style="width:100px;height:50px">
+              
+          </pre-img>
+            
+        </div>
+            
+          <h2   class="post-title" ng-bind-html="event.name | rawHtml" Style=" text-align: right" title="name"></h2>
+          <p class="post-author" Style=" text-align: right">
+           <span>{{event.date}}</span>
+              
+          </p>
+        </div>
+        <div class="post-content item item-text-wrap" post-content>
+          <p class="post-excerpt" dynamic-anchor-fix>{{ event.description | limitTo: 80 }} {{event.description.length < 20 ? '' : '...'}}</p>
+          <div class="row">
+  <div class="col"></div>
+  <div class="col col-35">
+              <a ui-sref="app.event-info({eventId: event.id_event})" class="button icon-right ion-chevron-right button-calm button-clear">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      
+      <!-- Infinit scroll -->
+    <ion-infinite-scroll ng-if="moreDataCanBeLoaded()" on-infinite="loadMoreData()" distance="1%" icon="ion-loading-c">
+    </ion-infinite-scroll>
+      
+  </ion-content>
+</ion-view>
