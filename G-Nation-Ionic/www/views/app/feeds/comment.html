@@ -1,0 +1,19 @@
+<ion-view class="category-feeds-view" ng-controller="CommentOnArticleCtrl">
+  <ion-nav-title>
+    <span>Comments</span>
+  </ion-nav-title>
+  <ion-content  >
+      
+              <label class="item item-input" >      
+          <textarea placeholder="Comments" name="txt" ng-model="com"></textarea>
+
+        </label>
+        <button type="submit" class="button button-positive button-block"
+             ng-click="doComment()"     >
+                add
+              </button>
+      
+    
+  </ion-content>
+</ion-view>
+

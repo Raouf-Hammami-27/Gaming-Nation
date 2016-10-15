@@ -1,0 +1,30 @@
+<ion-view class="forms-view" ng-controller="credentialsController">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Change credentials</span>
+  </ion-nav-title>
+  <ion-content>
+    <ul class="list">
+
+      <div class="item item-divider">Credentials</div>
+      
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Username</span>
+        <input type="text" placeholder="Username" ng-model="user.username">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Password</span>
+        <input type="password" placeholder="Password" ng-model="user.password">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label" >Email</span>
+        <input type="email" placeholder="Email" ng-model="user.email">
+      </label>
+         <button type="submit" class="button button-positive button-block" ng-click="updateCredntials()" ng-disabled="forgot_password_form.$invalid" ui-sref="auth.walkthrough">
+             Update
+        </button>
+    </ul>
+  </ion-content>
+</ion-view>

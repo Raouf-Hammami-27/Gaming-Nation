@@ -1,0 +1,14 @@
+﻿<div>
+
+    @{
+
+
+        var myChart = new Chart(width: 600, height: 400, theme: ChartTheme.Green)
+            .AddTitle("User's ForumThreads")
+            .AddSeries(
+                name: "nbr of HI / region",
+                xValue: ViewBag.nbrusers,
+                yValues: ViewBag.nbrForumTh)
+            .Write();
+    }
+</div>

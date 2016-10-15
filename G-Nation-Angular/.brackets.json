@@ -1,0 +1,13 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/My Name Is/Desktop/ionfullapp_v1.3.0/ionFullApp_1.3.0/www/js/factories.js",
+        "C:/Users/My Name Is/Desktop/ionfullapp_v1.3.0/ionFullApp_1.3.0/www/lib/moment/locale/bs.js",
+        "C:/Users/My Name Is/Desktop/ionfullapp_v1.3.0/ionFullApp_1.3.0/www/lib/moment/locale/ca.js",
+        "C:/Users/My Name Is/Desktop/ionfullapp_v1.3.0/ionFullApp_1.3.0/www/lib/moment/locale/cs.js",
+        "C:/Users/My Name Is/Desktop/ionfullapp_v1.3.0/ionFullApp_1.3.0/www/lib/moment/locale/cv.js",
+        "C:/Users/My Name Is/Desktop/ionfullapp_v1.3.0/ionFullApp_1.3.0/www/lib/moment/locale/cy.js",
+        "C:/Users/Jim Page/Desktop/www/js/controllers.js",
+        "C:/Users/Jim Page/Desktop/www/lib/moment/locale/be.js",
+        "moment.js"
+    ]
+}

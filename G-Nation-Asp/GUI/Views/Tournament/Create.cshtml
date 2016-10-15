@@ -1,0 +1,234 @@
+﻿@model GUI.Models.TournamentModels
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@section Scripts{
+<script type="text/javascript">
+    function getFiles() {
+        // Get input element
+        myFileList = document.getElementById("myfiles");
+        // loop through files property, using length to get number of files chosen
+        for (var i = 0; i < 1; i++) {
+            // display them in the div
+
+            $('#display').val(myFileList.files[i].name);
+        }
+        
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $("input").change(function(e) {
+
+    for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
+        var file = e.originalEvent.srcElement.files[i];
+
+        var img = document.createElement("img");
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            img.src = reader.result;
+            console.log( img.src);
+            $("#image").attr("src", img.src);
+        }
+        reader.readAsDataURL(file);
+    }
+});
+    });
+</script>
+    
+<script type="text/javascript">
+        $(document).ready(function () {
+            // Example Map 5
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', map5);
+
+
+            function map5() {
+                var myLatLng = { lat: 36.81881, lng: 10.16596 };
+
+                document.getElementById('latitude').value = 36.81881;
+                document.getElementById('longitude').value = 10.16596;
+
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: myLatLng
+              });
+              var title = 'Address:';
+              var description = 'Tunis';
+              var contentString = '<h4>' + title + '</h4>' + '<p>' + description + '</p>'
+
+              var infowindow = new google.maps.InfoWindow({
+                  content: contentString
+              });
+
+              var marker = new google.maps.Marker({
+                  position: myLatLng,
+                  map: map,
+                  draggable:true,
+                  title: 'Uluru (Ayers Rock)'
+              });
+              google.maps.event.addListener(marker, 'dragend', function (evt) {
+                  document.getElementById('latitude').value = evt.latLng.lat().toFixed(3);
+                  document.getElementById('longitude').value = evt.latLng.lng().toFixed(3);
+
+              });
+
+              google.maps.event.addListener(marker, 'dragstart', function (evt) {
+                  document.getElementById('latitude').value = 'Currently dragging...';
+                  document.getElementById('longitude').value = 'Currently dragging...';
+
+              });
+              marker.addListener('click', function() {
+                  infowindow.open(map, marker);
+              });
+            }
+        });
+</script>
+<!-- Vector Maps -->
+<script src="@Url.Content("~/Content/AdminJs/maps/maps.js")"></script>
+
+
+}
+
+@using (Html.BeginForm("Create", "Tournament", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+
+{
+
+
+
+@Html.AntiForgeryToken()
+    <div class="blog">
+    <div class="blog-header">
+        <h5 class="blog-title">New Tournament</h5>
+    </div>
+    <div class="blog-body">
+        <form id="movieForm" method="post" novalidate="novalidate" class="bv-form">
+            <div class="form-group has-feedback">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                        </div>
+                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">The title is required</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">The title must be less than 200 characters long</small>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.nbrPlaces, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.nbrPlaces, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.nbrPlaces, "", new { @class = "text-danger" })
+                        </div>
+                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="director" data-bv-result="NOT_VALIDATED" style="display: none;">The director name is required</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="director" data-bv-result="NOT_VALIDATED" style="display: none;">The director name must be less than 80 characters long</small>
+                    </div>
+                    <div class="col-md-4 selectContainer">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.evenement_id_Evenement, htmlAttributes: new { @class = "control-label" })
+                            @Html.DropDownListFor(model => model.evenement_id_Evenement, (SelectList)ViewBag.dropList, "-- -- Please Select -- --", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.evenement_id_Evenement)
+                        </div>
+                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="genre" data-bv-result="NOT_VALIDATED" style="display: none;">The genre is required</small>
+                    </div>
+                    
+            </div>
+            <div class="form-group has-feedback">
+                <div class="row">
+                    </div>
+                </div>
+          
+            <div class="form-group has-feedback">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.adresse, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.adresse, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.adresse, "", new { @class = "text-danger" })
+                        </div><small class="help-block" data-bv-validator="notEmpty" data-bv-for="website" data-bv-result="NOT_VALIDATED" style="display: none;">The website address is required</small><small class="help-block" data-bv-validator="uri" data-bv-for="website" data-bv-result="NOT_VALIDATED" style="display: none;">The website address is not valid</small>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.broadcast_link, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.broadcast_link, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.broadcast_link, "", new { @class = "text-danger" })
+                        </div>
+                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="trailer" data-bv-result="NOT_VALIDATED" style="display: none;">The trailer link is required</small><small class="help-block" data-bv-validator="uri" data-bv-for="trailer" data-bv-result="NOT_VALIDATED" style="display: none;">The trailer link is not valid</small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.TextAreaFor(model => model.description, new { @rows = 10, @cols = 150, @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                </div>
+                <small class="help-block" data-bv-validator="stringLength" data-bv-for="review" data-bv-result="NOT_VALIDATED" style="display: none;">The review must be less than 500 characters long</small>
+            </div>
+                <div class="form-group has-feedback">
+                    <label class="control-label">Image</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <span class="btn btn-primary btn-file">
+                                        Browse ...
+                                        @Html.TextBox("idFile", null, new { type = "file", id = "myfiles", @onchange = "getFiles()" })
+
+                                        @Html.ValidationMessageFor(model => model.image_link, "", new { @class = "text-danger" })
+                                    </span>
+                                </span>
+                                <input type="text" id="display" class="form-control" readonly>
+                            </div>
+                            <span class="help-block">
+                                Select the image you want to upload
+                            </span>
+                            <span class="help-block">
+                                <img src="" height="300" width="500" id="image" />
+                            </span></div>
+                            <small class="help-block" data-bv-validator="notEmpty" data-bv-for="rating" data-bv-result="NOT_VALIDATED" style="display: none;">The rating is required</small>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="blog">
+                                    <div class="blog-header">
+                                        <h5 class="blog-title">Address on Map</h5>
+                                    </div>
+                                    <div class="blog-body">
+                                        <div id="map" class="map"></div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.latitude, htmlAttributes: new { @class = "control-label" })
+                                                @Html.EditorFor(model => model.latitude, new { htmlAttributes = new { @class = "form-control", @id = "latitude", @readonly = "readonly" } })
+                                                @Html.ValidationMessageFor(model => model.latitude, "", new { @class = "text-danger" })
+
+
+                                            </div><small class="help-block" data-bv-validator="notEmpty" data-bv-for="writer" data-bv-result="NOT_VALIDATED" style="display: none;">The writer name is required</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="writer" data-bv-result="NOT_VALIDATED" style="display: none;">The writer name must be less than 80 characters long</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <dv class="form-group">
+                                                @Html.LabelFor(model => model.longitude, htmlAttributes: new { @class = "control-label" })
+                                                @Html.EditorFor(model => model.longitude, new { htmlAttributes = new { @class = "form-control", @id = "longitude", @readonly = "readonly" } })
+                                                @Html.ValidationMessageFor(model => model.longitude, "", new { @class = "text-danger" })
+                                        </div><small class="help-block" data-bv-validator="notEmpty" data-bv-for="producer" data-bv-result="NOT_VALIDATED" style="display: none;">The producer name is required</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="producer" data-bv-result="NOT_VALIDATED" style="display: none;">The producer name must be less than 80 characters long</small>
+
+                                    </div>
+
+                                </div>
+
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="trailer" data-bv-result="NOT_VALIDATED" style="display: none;">The trailer link is required</small><small class="help-block" data-bv-validator="uri" data-bv-for="trailer" data-bv-result="NOT_VALIDATED" style="display: none;">The trailer link is not valid</small>
+                            </div>
+                        </div>
+
+                            <div class="blog-body">
+                                <div class="demo-btn-group center-align-text">
+                                    <button type="submit" class="fa fa-save btn btn-default"> Save</button>
+                                    <button class="fa fa-mail-reply btn btn-success" onclick="location.href='@Url.Action("Index", "Tournament")';return false;"> Cancel</button>
+                                </div>
+                            </div>
+                        </div></div>
+                </div>
+
+</form>
+        </div></div>
+}

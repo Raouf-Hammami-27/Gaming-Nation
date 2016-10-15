@@ -1,0 +1,103 @@
+﻿@model IEnumerable<TAG_Domain.Entities.commentaire>
+
+@{
+    ViewBag.Title = "ListCmt";
+}
+
+@section Scripts{
+    <script src="@Url.Content("~/Content/AdminJs/jquery.js")"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="@Url.Content("~/Content/AdminJs/bootstrap.min.js")"></script>
+    <!-- Sparkline graphs -->
+    <script src="@Url.Content("~/Content/AdminJs/sparkline.js")"></script>
+    <!-- Data tables -->
+    <script src="@Url.Content("~/Content/AdminJs/jquery.datatables.js")"></script>
+    <!-- jquery ScrollUp JS -->
+    <script src="@Url.Content("~/Content/AdminJs/scrollup/jquery.scrollUp.js")"></script>
+    <!-- Custom Index -->
+    <script src="@Url.Content("~/Content/AdminJs/custom.js")"></script>
+    <script src="@Url.Content("~/Content/AdminJs/custom-datatables.js")"></script>
+}
+
+<!-- Spacer starts -->
+<div class="spacer">
+
+    <!-- Row Starts -->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">commentaires</h4>
+                </div>
+
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <div id="dt_example" class="table-responsive example_alt_pagination clearfix">
+                            <div class="dataTables_filter" id="data-table_filter">
+                               
+                                <table class="table no-margin table-condensed table-striped table-hover pull-left" id="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.idCommentaire)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.date)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.description)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.idArticle)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.idUser)
+                                            </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.idCommentaire)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.date)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.description)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.idArticle)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.idUser)
+                                                </td>
+                                                <td>
+
+                                            @Html.ActionLink("Delete", "DeleteCmt", new { id = item.idCommentaire })
+
+</td>
+                                            </tr>
+                                           
+                                        }
+                                    </tbody>
+                                </table>
+                         
+                            </div>
+                            <p>
+                             
+                                @Html.ActionLink("Back to List", "Index")
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row Ends -->
+    </div>
+    <!-- Spacer ends -->
+</div>
+<!-- Container fluid ends -->

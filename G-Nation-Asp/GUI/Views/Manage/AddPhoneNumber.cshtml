@@ -1,0 +1,43 @@
+﻿@model GUI.Models.AddPhoneNumberViewModel
+@{
+    ViewBag.Title = "Phone Number";
+}
+
+@using (Html.BeginForm("AddPhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="spacer">
+
+        <!-- Row Starts -->
+            <div class="blog">
+                <div class="blog-header">
+                    <h4 class="panel-title">Add your phone number</h4>
+                </div>
+
+            <div class="blog-body">
+                    <form id="movieForm" method="post" novalidate="novalidate" class="bv-form">
+                        <div class="form-group has-feedback">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        @Html.ValidationSummary("", new { @class = "text-danger" })
+                                        @Html.LabelFor(m => m.Number, new { @class = "control-label" })
+                                        @Html.TextBoxFor(m => m.Number, new { @class = "form-control" })
+                                        
+                                        </div>
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" class="btn btn-success" value="Submit" />
+                                    </div>
+                                    </div>
+                            </div>
+                            
+                    </form>
+                </div>
+            </div>
+        </div>
+           
+                                            }
+
+                                            @section Scripts {
+                                                @Scripts.Render("~/bundles/jqueryval")
+                                            }

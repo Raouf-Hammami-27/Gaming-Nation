@@ -1,0 +1,95 @@
+﻿@model GUI.Models.AddCrewViewModel
+@{
+    Layout = null;
+}
+
+<div class="container-fluid">
+    <!-- Current Stats Start -->
+    <div class="current-stats">
+        <div class="blog">
+            <div class="blog-header">
+                <h5 class="blog-title">Dashboard Analysis</h5>
+            </div>
+            <div class="blog-body">
+
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                    <div class="info-bg center-align-text">
+                        <div class="spacer-xs">
+                            <i class="fa fa-facebook fa-2x"></i>
+                            <small class="text-white">Facebook</small>
+                            <h3 class="no-margin no-padding">@ViewBag.FacebookMembers</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                    <div class="brown-bg center-align-text">
+                        <div class="spacer-xs">
+                            <i class="fa fa-google-plus fa-2x"></i>
+                            <small class="text-white">Google Plus</small>
+                            <h3 class="no-margin no-padding">@ViewBag.GoogleMembers</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                    <div class="success-bg center-align-text">
+                        <div class="spacer-xs">
+                            <i class="fa fa-user fa-2x"></i>
+                            <small class="text-white">Members</small>
+                            <h3 class="no-margin no-padding">@ViewBag.membersCount</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                    <div class="danger-bg center-align-text">
+                        <div class="spacer-xs">
+                            <i class="fa fa-star fa-2x"></i>
+                            <small class="text-white">VIP's</small>
+                            <h3 class="no-margin no-padding">@ViewBag.vipsCount</h3>
+        </div>
+    </div>
+</div>
+<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+    <div class="twitter-bg center-align-text">
+        <div class="spacer-xs">
+            <i class="fa fa-image   fa-2x"></i>
+            <small class="text-white">Uploaded Images</small>
+            <h3 class="no-margin no-padding">@ViewBag.images</h3>
+        </div>
+    </div>
+</div>
+
+               
+</div>
+</div>
+</div>
+<!-- Spacer starts -->
+<div class="spacer">
+
+    <!-- Row Start -->
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <!-- Widget starts -->
+            <div class="blog">
+                <div class="blog-header">
+                    <h5 class="blog-title">Calendar</h5>
+                </div>
+                <div class="blog-body">
+                    <!-- Row starts -->
+                    <div class="row">
+                        
+                        <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                            <div id="datepicker"></div>
+                        </div>
+                    </div>
+                    <!-- Row ends -->
+                </div>
+            </div>
+            <!-- Widget ends -->
+        </div>
+    </div>
+    <!-- Row End -->
+    <!-- Row Start -->
+    <!-- Row End -->
+
+</div>
+<!-- Spacer ends -->

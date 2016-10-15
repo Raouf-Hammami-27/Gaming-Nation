@@ -1,0 +1,30 @@
+<ion-view class="forgot-password-view auth-view" cache-view="false" ng-controller="RecoverCtrl">
+  <ion-content scroll="false">
+    <div class="row">
+      <div class="col col-center">
+        <div class="card forgot-password-container">
+          <form name="forgot_password_form" class="" novalidate>
+            <div class="item item-body">
+              <!--<label class="item item-input">
+                <input type="email" placeholder="Email" name="user_email" ng-model="user.email" required>
+              </label>-->
+                <label class="item item-input">
+                <input type="text" placeholder="Enter your encrypted password here" name="password" ng-model="$parent.password" required>
+              </label>
+            </div>
+            <div class="item item-body bottom-content">
+              <button type="submit" class="button button-positive button-block" ng-click="recoverAccount()" ng-disabled="login_form.user_password.$invalid"  ui-sref='app.feeds-categories({idUser: connectedUser})'>
+                Recover Account
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="alternative-actions">
+                 <a class="sign-up button button-small button-clear button-light" ui-sref="auth.signup">
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

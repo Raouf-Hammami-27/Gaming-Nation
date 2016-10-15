@@ -1,0 +1,51 @@
+﻿@using GUI.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "_login.cshtml";
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <div id="login" class="show">
+                        <div class="login-header">
+                            <h4>Log In</h4>
+                        </div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <form>
+                        <div class="form-group has-feedback">
+                            @Html.LabelFor(m => m.username, new { @class = "control-label" })
+
+                            @Html.TextBoxFor(m => m.username, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.username, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group has-feedback">
+                            @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+
+
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
+                        <div>
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe)
+                        </div>
+                        <br>
+                        <input type="submit" value="Login" class="btn btn-warning btn-lg btn-block">
+                        <br>
+                        <div class = "underline" onclick="location.href='@Url.Action("ForgotPassword", "Account")';return false;">Forgot Password?</div>
+                        <br>
+                        <div onclick="location.href='@Url.Action("Register", "Account")';return false;">Don't have an account? <span class = "text-danger">Sign Up</span></div>
+
+                    </form>
+                    @*<section id="socialLoginForm">
+                        @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                    </section>*@    
+                </div>
+                    
+            }

@@ -1,0 +1,67 @@
+[
+	{
+		"id":"gaming-news-online",
+		"title":"Gaming News Online",
+		"image":"img/feeds/news.jpg",
+		"feed_sources":[
+			{
+				"id":"ign-news",
+				"title":"IGN News",
+				"description":"IGN is the ultimate gaming and entertainment resource featuring award-winning coverage of video games, movies, TV shows, comics, tech and more.",
+				"image":"img/feeds/logos/ign-news.jpg",
+				"url":"http://feeds.ign.com/ign/news"
+			},
+			{
+				"id":"gamespot",
+				"title":"GameSpot",
+				"description":"Read the most authoritative, up-to-date news and headlines from the video games industry at GameSpot.",
+				"image":"img/feeds/logos/gamespot.jpg",
+				"url":"http://www.gamespot.com/feeds/news/"
+			},
+			{
+				"id":"videogamer",
+				"title":"VideoGamer",
+				"description":"Game News - VideoGamer.com brings you the latest video game news stories from around the globe.",
+				"image":"img/feeds/logos/videogamer.jpg",
+				"url":"http://feeds.videogamer.com/rss/news.xml"
+			},
+			{
+				
+				"id":"kotaku",
+				"title":"Kotaku",
+				"description":"Kotaku, the Gamer's Guide.",
+				"image":"img/feeds/logos/kotaku.jpg",
+				"url":"http://feeds.gawker.com/kotaku/vip"
+			}
+		]
+	},
+	{
+		"id":"gaming-reviews-online",
+		"title":"Gaming Reviews Online",
+		"image":"img/feeds/sports.jpg",
+		"feed_sources":[
+			{
+				"id":"ign-reviews",
+				"title":"IGN Reviews",
+				"description":"IGN is the ultimate gaming and entertainment resource featuring award-winning coverage of video games, movies, TV shows, comics, tech and more.",
+				"image":"img/feeds/logos/ign-news.jpg",
+				"url":"http://feeds.ign.com/ign/video-reviews"
+			},
+			{
+				"id":"gamespot",
+				"title":"GameSpot",
+				"description":"Get the most authoritative, unbiased reviews for the latest PS4, Xbox One, PS3, Xbox 360, Wii, PC, 3DS, and DS video games at GameSpot.",
+				"image":"img/feeds/logos/gamespot.jpg",
+				"url":"http://www.gamespot.com/feeds/reviews/"
+			},
+			{
+				"id":"videogamer",
+				"title":"VideoGamer",
+				"description":"Browse the latest reviews exclusively written the expert video games editors at VideoGamer.com.",
+				"image":"img/feeds/logos/videogamer.jpg",
+				"url":"http://feeds.videogamer.com/rss/reviews.xml"
+			}
+		]
+	}
+	
+]

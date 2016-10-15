@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Confirm Email";
+    Layout = "_login.cshtml";
+
+}
+
+<div id="forgot-pwd">
+    <div class="login-header">
+        <h4>Sign Up</h4>
+    </div>
+    <form>
+        <div>
+            <p>
+                You have activated your Account, welcome to the Brotherhood. Please<div onclick="location.href='@Url.Action("Login", "Account", new { id = "loginLink" })';return false;">Click here to <span class="text-danger">Log in</span></div>
+
+</p>
+        </div>
+
+    </form>
+
+</div>
+
+

@@ -1,0 +1,100 @@
+﻿@model IEnumerable<TAG_Domain.Entities.article>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DTYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idArticle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.link_img)
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.link_imgg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+       
+        
+        <th>
+            @Html.DisplayNameFor(model => model.adminn_idUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.member_idUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idVip)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idArticle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            <img src="~/Content/@item.link_img" height="100" />
+           
+        </td>
+        <td>
+            
+            <img src="~/Content/@item.link_imgg"  height="100" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+       
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.adminn_idUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.member_idUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idVip)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

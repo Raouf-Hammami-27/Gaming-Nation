@@ -1,0 +1,35 @@
+<ion-view class="feed-entries-view">
+  <ion-nav-title>
+    <span>{{event.name}}</span>
+  </ion-nav-title>
+  <ion-content>
+    <!-- Refresh to get the new posts -->
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <div class="entries-list">
+      <div  class="list card entry-item">
+        <div class="entry-heading item item-text-wrap">
+          <h2 class="entry-title" ng-bind-html="entry.title | rawHtml"></h2>
+          <p class="entry-author">
+            Published <span>{{ event.name }}</span>
+          </p>
+        </div>
+        <div class="entry-content item item-text-wrap">
+          <p class="entry-excerpt" dynamic-anchor-fix ng-bind-html="event.description"></p>
+          <div class="entry-actions row">
+            <div class="actions col col-center col-66">
+              <a class="button button-icon icon ion-bookmark" ng-click="bookmarkPost(entry)"></a>
+            </div>
+            <div class="read-more col col-center col-33" dynamic-anchor-fix>
+              <a class="button button-small button-block button-assertive" ui-sref="app.event-info({eventId: event.id_event})">
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+

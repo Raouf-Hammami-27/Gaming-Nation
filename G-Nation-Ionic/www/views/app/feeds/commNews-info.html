@@ -1,0 +1,46 @@
+<ion-view class="category-feeds-view" ng-controller="CommentnewsEntriesCtrl">
+  <ion-nav-title>
+    <span>Comments</span>
+  </ion-nav-title>
+  <ion-content>
+      
+      
+     
+    
+      
+    <div class="list category-feeds">
+        
+         
+    <div class="item item-input-inset">      
+    <label class="item item-input" >      
+          <textarea placeholder="Write a comment..." name="txt" ng-model="$parent.com"></textarea> </label> <button type="submit" class="button button-positive"
+             ng-click="doCommentNews()">
+                Comment
+              </button>
+        </div>
+       
+        
+        
+      <a ng-repeat="comment in comments" class="item item-avatar">
+      <img ng-src="{{comment.user.image_link}}">
+         
+        <h2>&nbsp{{comment.user.username}} &nbsp </h2> 
+             <span am-time-ago="comment.commentPk.date"></span>
+
+             <div class="post-content item item-text-wrap" post-content>
+          <p class="post-excerpt" dynamic-anchor-fix ng-bind-html="comment.description | rawHtml"></p>
+        </div>
+           </a> 
+        </div>
+      
+        
+  
+        
+        
+        
+    </div>
+  </ion-content>
+</ion-view>
+
+
+

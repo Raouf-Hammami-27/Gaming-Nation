@@ -1,0 +1,86 @@
+<html data-ng-app="G-Nation">
+<head>
+
+    <meta name="keywords" content="angularjs,SPA,Single Page Application,refresh tokens,authentication,bearer token authentication,OWIN,bootstrap,bootstrap ui,tutorial,JS framework,ASP.NET WEB API 2,Taiseer Joudeh" />
+    <meta name="description" content="SPA built using angularjs,authentication is done using bearer token,back end built using Asp.net web api 2 and OWIN Framework,creatd by Taiseer Joudeh" />
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <title>G-Nation</title>
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/site.css" rel="stylesheet" />
+    <link href="content/css/loading-bar.css" rel="stylesheet" />
+    <link href="content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="content/css/social-buttons.css" rel="stylesheet" /> 
+    <link rel="shortcut icon" href="../../content/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Bootstrap CSS -->
+  <link href="../../content/AdminCss/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="../../content/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../../content/css/social-buttons.css" rel="stylesheet" />
+  <!-- Animate CSS -->
+  <link href="../../content/AdminCss/animate.css" rel="stylesheet" media="screen">
+  <!-- Main CSS -->
+  <link href="../../content/AdminCss/main.css" rel="stylesheet" media="screen">
+  <!-- Main CSS -->
+  <link href="../../content/AdminCss/login.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../../content/AdminCss/font/font-awesome.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../../content/img/favicon.ico">
+  <link href="../../content/css/loading-bar.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      var body = $('body');
+      var backgrounds = [
+        'url("../../content/img/loginBg/bg1.jpg")',
+        'url("../../content//img/loginBg/bg2.jpg")',
+        'url("../../content//img/loginBg/bg3.jpg")',
+        'url("../../content//img/loginBg/bg4.jpg")',
+        'url("../../content//img/loginBg/bg5.jpg")',
+        'url("../../content//img/loginBg/bg6.jpg")',
+        'url("../../content//img/loginBg/bg7.jpg")',
+        'url("../../content//img/loginBg/bg8.jpg")'
+      ];
+      var current = 0;
+
+      function nextBackground() {
+        body.css(
+          'background-image',
+          backgrounds[current = ++current % backgrounds.length]);
+
+        setTimeout(nextBackground, 5000);
+      }
+      setTimeout(nextBackground, 5000);
+      body.css('background-image', backgrounds[0]);
+      body.fadeIn(1500);
+    });
+  </script>
+    </head>
+    <body id="dvImage">
+<div  class="container-fluid">
+    <div class="row">
+<div class="col-md-push-4 col-md-4 col-sm-push-3 col-sm-6 col-sx-12">
+      <div class="login-container" >
+          <div class="login-wrapper animated flipInY">
+<form class="form-login" role="form">
+                  <div class="login-header">
+                      <h4>Sign up</h4></div>
+    <br>
+     <input type="text" class="form-control" placeholder="First Name" data-ng-model="registration.FirstName" required autofocus>
+ <input type="text" class="form-control" placeholder="Last Name" data-ng-model="registration.lastName" required autofocus>
+<input type="email" class="form-control" placeholder="Email" data-ng-model="registration.email" required autofocus>
+ <input type="file" class="form-control" placeholder="Picture" data-ng-model="registration.picture" required autofocus>
+    <input type="text" class="form-control" placeholder="Username" data-ng-model="registration.userName" required autofocus>
+    <input type="password" class="form-control" placeholder="Password" data-ng-model="registration.password" required autofocus>
+    <input type="password" class="form-control" placeholder="Confirm Password" data-ng-model="registration.password" required>
+    <button class="btn btn-lg btn-success " type="submit" data-ng-click="signUp()">Submit</button>
+    <br>
+    <div data-ng-hide="message == ''" data-ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+        {{message}}
+    </div>
+    </div>
+</form>
+    </div>
+        </div></div>
+</div>
+    </body>
+</html>
